@@ -1,0 +1,8 @@
+function [ r ] = difference( f1,f2 )
+       k=rgb2gray(f1);  
+       l=rgb2gray(f2);
+       f11=imhist(k);  
+       f12=imhist(l);
+       diffe=imabsdiff(f11,f12); 
+       r=sum(diffe);
+   end
